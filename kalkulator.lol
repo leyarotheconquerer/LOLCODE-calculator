@@ -6,21 +6,50 @@ HAI 1.4
 	I HAS A DWA 
 	I HAS A EX
 	I HAS A LNG
-	VISIBLE "Choose language."
-	VISIBLE "1. English"
-	VISIBLE "2. polski"
+	I HAS A DEFAULT
+	I HAS A LNGS ITZ A BUKKIT
+	I HAS A ZWROTY ITZ A BUKKIT
+	BTW English
+	LNGS HAS A SRS 1 ITZ "English"
+	DEFAULT R 1
+	ZWROTY HAS A SRS 1 ITZ A BUKKIT
+	ZWROTY'Z SRS 1 HAS A choose ITZ "Choose language."
+	ZWROTY'Z SRS 1 HAS A first ITZ ":)Welcome in calculator. :)Input first number:"
+	ZWROTY'Z SRS 1 HAS A second ITZ " :)Input second number:"
+	ZWROTY'Z SRS 1 HAS A opnodiv ITZ ":)Choose an operation: :)1. Add :)2. Subtract :)3. Multiply"
+	ZWROTY'Z SRS 1 HAS A op ITZ "Choose an operation: :)1. Add :)2. Subtract :)3. Multiply :)4. Divide"
+	ZWROTY'Z SRS 1 HAS A error ITZ "Choose the operation through inputing a corresponding number."
+	ZWROTY'Z SRS 1 HAS A langerror ITZ "Those are only supported languages rn. Feel free to add translations."
+	BTW polski
+	LNGS HAS A SRS 2 ITZ "polski"
+	ZWROTY HAS A SRS 2 ITZ A BUKKIT
+	ZWROTY'Z SRS 2 HAS A choose ITZ "Choose language."
+	ZWROTY'Z SRS 2 HAS A first ITZ ":)Witaj w kalkulatorze. :)Wprowadz pierwsza liczbe:"
+	ZWROTY'Z SRS 2 HAS A second ITZ " :)Wprowadz druga liczbe:"
+	ZWROTY'Z SRS 2 HAS A opnodiv ITZ ":)Wybierz dzialanie: :)1. Dodawanie :)2. Odejmowanie :)3. Mnozenie"
+	ZWROTY'Z SRS 2 HAS A op ITZ "Wybierz dzialanie: :)1. Dodawanie :)2. Odejmowanie :)3. Mnozenie :)4. Dzielenie"
+	ZWROTY'Z SRS 2 HAS A error ITZ "Wybierz dzialanie poprzez wpisanie odpowiedniego numeru."
+	ZWROTY'Z SRS 2 HAS A langerror ITZ "Those are only supported languages rn. Feel free to add translations."
+	I HAS A CURRENT ITZ ZWROTY'Z SRS DEFAULT
+	VISIBLE CURRENT'Z choose
+	IM IN YR lngs UPPIN YR INDEX TIL BOTH SAEM INDEX AN 2
+		VISIBLE SMOOSH SUM OF INDEX AN 1 AN ". " AN LNGS'Z SRS SUM OF INDEX AN 1 MKAY
+	IM OUTTA YR lngs
 	GIMMEH LNG
-	LNG, WTF?
-		OMG "1" BTW English
-			VISIBLE ":)Welcome in calculator. :)Input first number:"
+	LNG IS NOW A NUMBR
+	BOTH OF BOTH SAEM LNG AN BIGGR OF 1 AN LNG AN BOTH SAEM LNG AN SMALLR OF 2 AN LNG
+	O RLY?
+		YA RLY
+			CURRENT R ZWROTY'Z SRS LNG
+			VISIBLE CURRENT'Z first
 			GIMMEH JEDEN
-			VISIBLE " :)Input second number:"
+			VISIBLE CURRENT'Z second
 				GIMMEH DWA
 			JEDEN IS NOW A NUMBAR
 			DWA IS NOW A NUMBAR
 			BOTH SAEM DWA AN 0.0, O RLY?
 				YA RLY
-					VISIBLE ":)Choose an operation: :)1. Add :)2. Subtract :)3. Multiply"
+					VISIBLE CURRENT'Z opnodiv
 					GIMMEH EX
 					EX, WTF?
 						OMG "1"
@@ -33,11 +62,11 @@ HAI 1.4
 							VISIBLE PRODUKT OF JEDEN AN DWA
 							GTFO
 						OMGWTF
-							VISIBLE "Choose the operation through inputing a corresponding number."
+							VISIBLE CURRENT'Z error
 							GTFO
 						OIC
 				NO WAI
-					VISIBLE "Choose an operation: :)1. Add :)2. Subtract :)3. Multiply :)4. Divide"
+					VISIBLE CURRENT'Z op
 					GIMMEH EX
 					EX, WTF?
 						OMG "1"
@@ -53,61 +82,11 @@ HAI 1.4
 							VISIBLE QUOSHUNT OF JEDEN AN DWA
 							GTFO
 						OMGWTF
-							VISIBLE "Choose the operation through inputting a corresponding number."
+							VISIBLE CURRENT'Z error
 							GTFO
 						OIC
 			OIC
-			GTFO
-
-		OMG "2" BTW Polish
-			VISIBLE ":)Witaj w kalkulatorze. :)Wprowadz pierwsza liczbe:"
-			GIMMEH JEDEN
-			VISIBLE " :)Wprowadz druga liczbe:"
-				GIMMEH DWA
-			JEDEN IS NOW A NUMBR
-			DWA IS NOW A NUMBR
-			BOTH SAEM DWA AN 0, O RLY?
-				YA RLY
-					VISIBLE ":)Wybierz dzialanie: :)1. Dodawanie :)2. Odejmowanie :)3. Mnozenie"
-					GIMMEH EX
-					EX, WTF?
-						OMG "1"
-							VISIBLE SUM OF JEDEN AN DWA
-							GTFO
-						OMG "2"
-							VISIBLE DIFF OF JEDEN AN DWA
-							GTFO
-						OMG "3"
-							VISIBLE PRODUKT OF JEDEN AN DWA
-							GTFO
-						OMGWTF
-							VISIBLE "Wybierz dzialanie poprzez wpisanie odpowiedniego numeru."
-							GTFO
-						OIC
-				NO WAI
-					VISIBLE "Wybierz dzialanie: :)1. Dodawanie :)2. Odejmowanie :)3. Mnozenie :)4. Dzielenie"
-					GIMMEH EX
-					EX, WTF?
-						OMG "1"
-							VISIBLE SUM OF JEDEN AN DWA
-							GTFO
-						OMG "2"
-							VISIBLE DIFF OF JEDEN AN DWA
-							GTFO
-						OMG "3"
-							VISIBLE PRODUKT OF JEDEN AN DWA
-							GTFO
-						OMG "4"
-							VISIBLE QUOSHUNT OF JEDEN AN DWA
-							GTFO
-						OMGWTF
-							VISIBLE "Wybierz dzialanie poprzez wpisanie odpowiedniego numeru."
-							GTFO
-						OIC
-			OIC
-			GTFO
-
-		OMGWTF
-			VISIBLE "Those are only supported languages rn. Feel free to add translations."
-		OIC
+		NO WAI
+			VISIBLE CURRENT'Z langerror
+	OIC
 KTHXBYE
